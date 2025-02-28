@@ -16,10 +16,6 @@ import (
 	"path/filepath"
 )
 
-const (
-	MAIN_ICON winres.ID = 0
-)
-
 type WindowsExtractor struct{}
 
 func (w *WindowsExtractor) ExtractIcon(path string) error {
