@@ -40,7 +40,9 @@ var defaultCmd = &cobra.Command{
 				}
 				if utils.FileExists(path) {
 					err := extractFile(path)
-					fmt.Println(err, ":", path)
+					if err != nil {
+						fmt.Println(err, ":", path)
+					}
 				}
 				return nil
 			})
